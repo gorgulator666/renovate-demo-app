@@ -31,5 +31,29 @@
       "automerge": true,
       "prPriority": -1
     }
-  ]
-}
+  ],
+  "customManagers": [
+    {
+      "customType": "regex",
+      "fileMatch": [
+        "^tool-versions\\.txt$"
+      ],
+      "matchStrings": [
+        "node=(?<currentValue>[\\d\\.]+)\\n"
+      ],
+      "depNameTemplate": "nodejs/node",
+      "datasourceTemplate": "github-releases",
+      "versioningTemplate": "node"
+    },
+    {
+      "customType": "regex",
+      "fileMatch": [
+        "^tool-versions\\.txt$"
+      ],
+      "matchStrings": [
+        "terraform=(?<currentValue>[\\d\\.]+)\\n"
+      ],
+      "depNameTemplate": "hashicorp/terraform",
+      "datasourceTemplate": "github-releases"
+    }
+  }

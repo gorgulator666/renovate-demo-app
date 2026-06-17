@@ -56,4 +56,5 @@
       "depNameTemplate": "hashicorp/terraform",
       "datasourceTemplate": "github-releases"
     }
-  }
+  ]
+}
